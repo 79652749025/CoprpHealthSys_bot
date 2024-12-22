@@ -51,7 +51,7 @@ logging.basicConfig(level=logging.INFO,
                            "(%(filename)s).%(funcName)s(%(lineno)d) - %(message)s")
 
 import os
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = 
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") # Изменено здесь
 
@@ -61,7 +61,7 @@ if OPENAI_API_KEY is None:
 
 
 # Constants
-TOKEN = '7490574376:AAE_r9y3KNsz-xc57K1NXnSjIBYyFVO9Dgk'
+TOKEN = 
 user_data = {}  # Dictionary to store user data
 # Global variables
 media_files = {}
