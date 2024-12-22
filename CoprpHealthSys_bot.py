@@ -51,7 +51,7 @@ logging.basicConfig(level=logging.INFO,
                            "(%(filename)s).%(funcName)s(%(lineno)d) - %(message)s")
 
 import os
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") # Изменено здесь
 
@@ -68,7 +68,7 @@ media_files = {}
 document_files = {}
 dialog_history = {}
 faiss_db = None
-current_model = "gpt-4o-mini"
+current_model = "gpt-3.5-turbo"
 temp = 1
 verbose = 0
 relevant_chanks = 8
@@ -77,7 +77,7 @@ def similarity_search(query, search_index, k=1):
     return search_index.similarity_search(query=query, k=k)
 
 
-def answer_neuro(system_neuro, instruction_neuro, topic, search_index, summary_history, temp=1, verbose=0, k=8, model="gpt-4o-mini"):
+def answer_neuro(system_neuro, instruction_neuro, topic, search_index, summary_history, temp=1, verbose=0, k=8, model="gpt-3.5-turbo"):
     docs = search_index.similarity_search(query=topic, k=k)
     message_content = re.sub(r'\r\n', ' ', '\n '.join([f'\n--------------------\n' + doc.page_content + '\n' for doc in docs]))
     # Define faiss_response here using the retrieved documents (docs)
