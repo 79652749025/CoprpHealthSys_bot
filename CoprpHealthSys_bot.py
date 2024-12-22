@@ -51,7 +51,7 @@ logging.basicConfig(level=logging.INFO,
                            "(%(filename)s).%(funcName)s(%(lineno)d) - %(message)s")
 
 import os
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") # Изменено здесь
 
